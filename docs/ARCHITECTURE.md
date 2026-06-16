@@ -530,7 +530,11 @@ The backend is a Flask application in `utk_curio/backend/`. All routes are defin
 
 | Endpoint | Method | Purpose |
 |---|---|---|
-| `/signin` | POST | Google OAuth sign-in |
+| `/api/auth/signup` | POST | Create an account (username + password) |
+| `/api/auth/signin` | POST | Username/password sign-in |
+| `/api/auth/signin/guest` | POST | Guest sign-in (when enabled) |
+| `/api/auth/signout` | POST | Invalidate the session token |
+| `/api/auth/me` | GET/PATCH | Current user profile |
 
 ---
 

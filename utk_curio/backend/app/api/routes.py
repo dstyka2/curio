@@ -503,12 +503,6 @@ def install_packages():
         return response
     return response.json()
 
-@bp.route('/signin', methods=['POST'])
-def signin_legacy():
-    """Deprecated shim — redirects to /api/auth/signin/google."""
-    from flask import redirect
-    return redirect('/api/auth/signin/google', code=308)
-
 @bp.route('/getUser', methods=['GET'])
 def get_user_legacy():
     """Deprecated shim — redirects to /api/auth/me."""
